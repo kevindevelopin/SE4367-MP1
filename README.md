@@ -1,17 +1,12 @@
 ## Table of content
 
-- [Introduction](#introduction)
 - [Part 1](#part-1)
 - [Part 2](#part-2)
 - [Part 3](#part-3)
 
-## Introduction
-
-
-
 ## Part-1
 
-Control Flow Analysis - FindingDominators
+**Control Flow Analysis - FindingDominators**
 
 Files Used:
 
@@ -25,11 +20,11 @@ A quick search in the soot source code on github I was able to find the class MH
 
 ## Part-2
 
+**Data Flow Analysis - Call GraphConstruction**
+
 Files Used:
   Example.java
   testSootCallGraph.java
-  
-Data Flow Analysis - Call GraphConstruction
 
 In this section we use Soot to construct call graphs with the goal of developing a basic sense of inter-procedural data flow analysis.
 
@@ -78,9 +73,9 @@ protected void internalTransform(String phaseName,
 }
 ```
 
-Results:
+**Results:**
 
-CHA output:
+**CHA output:**
 
 Total Edges:12
 <a1.Example: a1.Animal selectAnimal()> may call <a1.Cat: void <init>()>
@@ -98,7 +93,7 @@ Total Edges:12
 Elapsed time: 2355292
 
 
-PTA output:
+**PTA output:**
 
 Total Edges:7
 <a1.Example: a1.Animal selectAnimal()> may call <a1.Cat: void <init>()>
@@ -113,3 +108,22 @@ Total Edges:7
 As shown in the output above, CHA found 12 edges in 2355292 nanoseconds and PTA found 7 edges in 725166 nanoseconds. 
 
 ## Part-3
+
+**Program Instrumentation with Soot**
+
+Files Used:
+	HelloThread.java
+	Log.Java
+	TestSootLoggingHeap.Java
+
+This section required we are required to instrument every field access in HelloThread.java to print out access information. I had some difficulties finding a way to determine whether it was a read or a write statement.
+
+**Output:**
+
+Thread Thread-9 read static field x
+Thread Thread-10 read static field x
+Thread Thread-10 read instance field y of object Thread[Thread-10,5,Soot Threadgroup]
+Thread Thread-10 read instance field y of object Thread[Thread-10,5,Soot Threadgroup]
+Thread Thread-9 read instance field y of object Thread[Thread-9,5,Soot Threadgroup]
+Thread Thread-9 read static field x
+Thread Thread-9 read static field out
