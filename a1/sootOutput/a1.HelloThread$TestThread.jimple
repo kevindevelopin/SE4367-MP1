@@ -1,0 +1,33 @@
+class a1.HelloThread$TestThread extends java.lang.Thread
+{
+    int y;
+
+    void <init>()
+    {
+        a1.HelloThread$TestThread r0;
+
+        r0 := @this: a1.HelloThread$TestThread;
+
+        specialinvoke r0.<java.lang.Thread: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        a1.HelloThread$TestThread r0;
+        int $i0, $i1;
+
+        r0 := @this: a1.HelloThread$TestThread;
+
+        <a1.HelloThread: int x> = 0;
+
+        $i0 = r0.<a1.HelloThread$TestThread: int y>;
+
+        $i1 = $i0 + 1;
+
+        r0.<a1.HelloThread$TestThread: int y> = $i1;
+
+        return;
+    }
+}

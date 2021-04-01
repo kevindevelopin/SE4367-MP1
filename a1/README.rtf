@@ -1,0 +1,56 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2577
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww23640\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Part 1 \
+\
+After experimenting with the code under analysis provided in part1, I found that no change was needed to the Analysis() method in DominatorFinder.java\
+\
+Part2\
+\
+Running TestSootCallGraph on example with CHA algorithm took:\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 2157250 
+\f0 Nano seconds \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Running TestSootCallGraph on example with PTA algorithm took:\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 859042 
+\f0 Nano seconds \
+\
+\
+Therefore, PTA was much faster\
+\
+\
+Part 3\
+\
+
+\f1 Thread Thread-9 read instance field soot.jimple.internal.JAssignStmt of object <a1.HelloThread: int x> = 1\
+Thread Thread-10 read instance field soot.jimple.internal.JAssignStmt of object <a1.HelloThread: int x> = 0\
+Thread Thread-10 read instance field soot.jimple.internal.JAssignStmt of object $i0 = r0.<a1.HelloThread$TestThread: int y>\
+Thread Thread-10 read instance field soot.jimple.internal.JAssignStmt of object r0.<a1.HelloThread$TestThread: int y> = $i1\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r14 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r3 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-9 read instance field soot.jimple.internal.JAssignStmt of object $i3 = $r2.<a1.HelloThread$TestThread: int y>\
+Thread Thread-9 read instance field soot.jimple.internal.JAssignStmt of object $i1 = <a1.HelloThread: int x>\
+Thread Thread-9 read instance field soot.jimple.internal.JAssignStmt of object $r3 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r17 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r4 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r2 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r3 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r5 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r5 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r4 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r4 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r4 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r4 = <java.lang.System: java.io.PrintStream out>\
+Thread Thread-11 read instance field soot.jimple.internal.JAssignStmt of object $r4 = <java.lang.System: java.io.PrintStream out>
+\f0 \
+}

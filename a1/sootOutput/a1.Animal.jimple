@@ -1,0 +1,16 @@
+abstract class a1.Animal extends java.lang.Object
+{
+
+    void <init>()
+    {
+        a1.Animal r0;
+
+        r0 := @this: a1.Animal;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public abstract void saySomething();
+}

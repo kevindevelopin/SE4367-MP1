@@ -1,0 +1,54 @@
+public class a1.HelloThread extends java.lang.Object
+{
+    static int x;
+
+    static void <clinit>()
+    {
+        <a1.HelloThread: int x> = 1;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        a1.HelloThread r0;
+
+        r0 := @this: a1.HelloThread;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+        int i0, $i1, $i2, $i3;
+        a1.HelloThread$TestThread $r2;
+        java.io.PrintStream $r3, $r2;
+
+        r0 := @parameter0: java.lang.String[];
+
+        $r2 = <java.lang.System: java.io.PrintStream out>;
+
+        $r2 = new a1.HelloThread$TestThread;
+
+        specialinvoke $r2.<a1.HelloThread$TestThread: void <init>()>();
+
+        virtualinvoke $r2.<a1.HelloThread$TestThread: void start()>();
+
+        $i3 = $r2.<a1.HelloThread$TestThread: int y>;
+
+        $i1 = <a1.HelloThread: int x>;
+
+        $i2 = 1 / $i1;
+
+        i0 = $i3 + $i2;
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(int)>(i0);
+
+        return;
+    }
+}

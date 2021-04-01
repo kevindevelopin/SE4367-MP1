@@ -1,0 +1,31 @@
+class a1.HelloThread$test extends java.lang.Object
+{
+    int x;
+
+    void <init>()
+    {
+        a1.HelloThread$test r0;
+
+        r0 := @this: a1.HelloThread$test;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<a1.HelloThread$test: int x> = 0;
+
+        return;
+    }
+
+    public void test1()
+    {
+        a1.HelloThread$test r0;
+        java.io.PrintStream $r1;
+
+        r0 := @this: a1.HelloThread$test;
+
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>("Hello there");
+
+        return;
+    }
+}
