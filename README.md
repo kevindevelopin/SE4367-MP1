@@ -1,1 +1,17 @@
-# SE4367-MP1
+## Table of content
+
+- [Introduction](#introduction)
+- [Part 1](#part-1)
+- [Part 2](#part-2)
+- [Part 3](#part-3)
+
+## Introduction
+
+
+## Part-1
+
+
+## Part-2
+
+
+## Part-3
